@@ -1,5 +1,5 @@
 // en desarrollo apunta al back local y al publicar se cambia por la url del web service
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'https://obligatorio2-programacion2-n0f5.onrender.com';
 
 // comparte las consultas de pokemon en un objeto para no repetirlas durante esta visita
 const cache = {};
