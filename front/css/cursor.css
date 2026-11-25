@@ -1,0 +1,19 @@
+@media (hover: hover) and (pointer: fine) {
+  html, body, dialog {
+    cursor: url("../assets/cursor-ditto-rosa.svg") 2 2, auto;
+  }
+
+  a[href], button, select, summary, [role="button"],
+  input[type="checkbox"], input[type="radio"], .sexo label,
+  .sexo input, .shiny input {
+    cursor: url("../assets/cursor-ditto-celeste.svg") 2 2, pointer;
+  }
+
+  input:not([type="checkbox"]):not([type="radio"]), textarea {
+    cursor: text;
+  }
+
+  button:disabled, select:disabled, input:disabled, .sexo input:disabled, .shiny input:disabled {
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,426 @@
+/* Personalización, con los tres paneles del prototipo. */
+.personalizacion {
+  display:grid;
+  grid-template-columns:16.7857rem 1fr;
+  gap:3.7143rem;
+  margin-block:0
+}
+
+.resumen-pokemon {
+  border:1px solid var(--borde);
+  border-radius:1.7857rem;
+  padding:2rem 2.2143rem;
+  text-align:center
+}
+
+.resumen-pokemon .numero-especie {
+  color:#666;
+  font:1rem Arial;
+  margin-top:0.5714rem
+}
+
+.resumen-pokemon h1 {
+  font-size:1.6429rem;
+  margin:0.4286rem 0 0.7143rem
+}
+
+.tipos {
+  display:flex;
+  justify-content:center;
+  gap:0.3571rem;
+  flex-wrap:wrap
+}
+
+.tipos>span {
+  background:var(--color);
+  border:1px solid #555;
+  border-radius:1.4286rem;
+  color:white;
+  text-shadow:0 1px #999;
+  padding:0.25rem 0.6rem;
+  font-size:0.95rem;
+  line-height:1.15;
+  text-transform:uppercase
+}
+
+.mote {
+  text-align:left;
+  margin-top:0.8571rem;
+  border-top:1px solid var(--borde);
+  padding-top:1.0714rem;
+  font-size:0.7143rem;
+  color:#666
+}
+
+.mote input {
+  width:100%;
+  margin-top:0.2857rem;
+  height:1.9286rem;
+  font-size:0.7143rem;
+  color:#111;
+  padding:0.3571rem 0.8571rem
+}
+
+.notas {
+  font-size:1rem;
+  margin-top:1.2857rem
+}
+
+@media (min-width:761px) {
+  .personalizacion aside {
+    display:flex;
+    flex-direction:column
+  }
+
+  .personalizacion .notas {
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    min-height:6rem
+  }
+
+  .personalizacion .notas textarea {
+    flex:1;
+    resize:none
+  }
+}
+
+.notas textarea {
+  margin-top:0.5714rem;
+  min-height:4.6429rem;
+  border-radius:1.6429rem;
+  padding:0.9286rem;
+  font-size:0.8571rem
+}
+
+.personalizacion aside>.acciones {
+  margin-top:1.1429rem;
+  gap:1.2143rem
+}
+
+.personalizacion aside>.acciones button {
+  font-size:0.7143rem;
+  padding:0.3571rem 0.9286rem
+}
+
+.personalizacion aside>.error {
+  margin-top:0.5714rem
+}
+
+.paneles-personalizacion {
+  display:flex;
+  flex-direction:column;
+  gap:0.8571rem;
+  min-width:0
+}
+
+.informacion {
+  padding:1.4286rem 2.4286rem 1.5714rem
+}
+
+.fila-info {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1.2143rem
+}
+
+.fila-info label {
+  display:flex;
+  align-items:center;
+  gap:0.9286rem;
+  font-size:0.7143rem;
+  color:#555
+}
+
+.fila-info select {
+  font-size:0.7143rem;
+  width:8.4286rem;
+  height:1.9286rem;
+  padding:0.2857rem 0.7143rem;
+  color:#111
+}
+
+.fila-info input[type=number] {
+  font-size:0.7143rem;
+  height:1.9286rem;
+  width:4.3571rem
+}
+
+.fila-info.secundaria {
+  margin-top:0.7857rem
+}
+
+.sexo {
+  border:0;
+  padding:0;
+  display:flex;
+  gap:0.3571rem;
+  align-items:center;
+  margin:0;
+  position:relative;
+  padding-left:2.5rem;
+  min-width:5.9286rem
+}
+
+.sexo legend {
+  position:absolute;
+  left:0;
+  top:0.3571rem;
+  font-size:0.7143rem;
+  color:#555
+}
+
+.sexo label {
+  position:relative;
+  display:block
+}
+
+.sexo input {
+  position:absolute;
+  opacity:0;
+  inset:0;
+  width:1.5714rem;
+  height:1.5714rem;
+  margin:0;
+  cursor:pointer
+}
+
+.sexo label span {
+  font:1.2857rem Arial;
+  width:1.5714rem;
+  height:1.5714rem;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#eee;
+  color:#777
+}
+
+.sexo input[value=hembra]:checked + span {
+  color:#dc6b9c;
+  background:#fae7f0
+}
+
+.sexo input[value=macho]:checked + span {
+  color:#38749a;
+  background:#dceffa
+}
+
+.sexo input:checked+span {
+  outline:1px solid #888;
+  outline-offset:1px
+}
+
+.sexo input:focus-visible+span {
+  outline:2px solid #333
+}
+
+.sexo input:disabled+span {
+  opacity:.2
+}
+
+.sexo>span {
+  font-size:0.7143rem;
+  white-space:nowrap;
+  background:none;
+  width:auto;
+  height:auto;
+  border-radius:0
+}
+
+.shiny {
+  position:relative
+}
+
+.shiny input {
+  position:absolute;
+  right:0;
+  opacity:0;
+  width:2.7857rem;
+  height:1.5714rem;
+  cursor:pointer;
+  z-index:1
+}
+
+.shiny>span {
+  width:2.7857rem;
+  height:1.4286rem;
+  background:#d8d8d8;
+  border-radius:1.4286rem;
+  position:relative
+}
+
+.shiny>span:after {
+  content:'';
+  position:absolute;
+  width:1.1429rem;
+  height:1.1429rem;
+  border-radius:50%;
+  background:#fff;
+  left:2px;
+  top:2px;
+  transition:transform .15s
+}
+
+.shiny input:checked+span {
+  background:#777
+}
+
+.shiny input:checked+span:after {
+  transform:translateX(1.3571rem)
+}
+
+.shiny input:focus-visible+span {
+  outline:2px solid #555
+}
+
+.shiny input:disabled+span {
+  opacity:.4
+}
+
+.movimientos {
+  padding:1.5714rem 1.7143rem 1.7857rem
+}
+
+.movimientos h2 {
+  margin-bottom:1rem
+}
+
+.cuatro-movimientos {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0.7143rem 1.7143rem
+}
+
+.cuatro-movimientos>div:nth-child(2) {
+  grid-row:2
+}
+
+.cuatro-movimientos>div:nth-child(n+3) {
+  grid-column:2
+}
+
+.cuatro-movimientos>div:nth-child(3) {
+  grid-row:1
+}
+
+.cuatro-movimientos>div:nth-child(4) {
+  grid-row:2
+}
+
+.columnas-mov,.fila-movimiento {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 2.1429rem 2.1429rem 1.9286rem 1.9286rem;
+  gap:1px;
+  align-items:center
+}
+
+.columnas-mov {
+  font-size:0.5714rem;
+  color:#666;
+  padding:0 0.5714rem;
+  text-align:center;
+  margin-bottom:0.3571rem
+}
+
+.cuatro-movimientos>div:nth-child(even) .columnas-mov {
+  display:none
+}
+
+.fila-movimiento {
+  width:100%;
+  border:1px solid var(--borde);
+  border-radius:0.7857rem;
+  font-size:0.6429rem;
+  padding:0.3571rem 0.5714rem;
+  min-height:2rem
+}
+
+.fila-movimiento>span:first-child {
+  text-align:left;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap
+}
+
+.numero-mov {
+  background:#f1f2f3;
+  text-align:center;
+  padding:3px 0;
+  font:0.6429rem Arial
+}
+
+.tipo-mov,.categoria-mov {
+  width:1.2143rem;
+  height:1.2143rem;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:white;
+  font:0.7857rem Arial;
+  background:var(--color,#999);
+  justify-self:center
+}
+
+.categoria-mov.special {
+  background:#4d6bd2
+}
+
+.categoria-mov.physical {
+  background:#e96529
+}
+
+.categoria-mov.status {
+  background:#999
+}
+
+.estadisticas {
+  padding:1.5714rem 2rem
+}
+
+.estadisticas h2 {
+  margin-bottom:1.2857rem
+}
+
+.tabla-estadisticas {
+  position:relative
+}
+
+.estadisticas table {
+  width:100%;
+  border-collapse:collapse;
+  text-align:center;
+  table-layout:fixed;
+  font-size:0.7143rem
+}
+
+.estadisticas th {
+  font-weight:400;
+  color:#555;
+  padding:0.7143rem 0
+}
+
+.estadisticas th:first-child {
+  text-align:left;
+  width:3.2857rem
+}
+
+.estadisticas td {
+  padding:0.5rem 0
+}
+
+.estadisticas input {
+  width:3.1429rem!important;
+  font-size:0.7143rem;
+  height:1.9286rem;
+  padding:0.2857rem!important
+}
+
+.total-ev {
+  display:block;
+  text-align:right;
+  font-size:0.6429rem;
+  margin-top:0.3571rem
+}
+

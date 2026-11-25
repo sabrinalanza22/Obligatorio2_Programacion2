@@ -1,0 +1,23 @@
+{
+  "name": "pokemon-equipos",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node inicio.js",
+    "dev": "node inicio.js",
+    "test": "node --test ../pruebitasss"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.10",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.0"
+  }
+}
