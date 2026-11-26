@@ -109,7 +109,7 @@ export function confirmar(tituloModal, mensaje, alConfirmar) {
   };
 }
 
-// repartimos las listas largas para que se puedan recorrer sin desplazar la ventana
+// repartir las listas largas para que se puedan recorrer sin desplazar la ventana
 export function paginar(caja, elementos, porPagina, dibujar) {
   const controles = document.createElement('nav');
   controles.className = 'paginacion';

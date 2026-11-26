@@ -9,7 +9,7 @@ import {
 
 export const equipos = Router();
 
-// revisamos el formato del id antes de llamar al controlador
+// revisar el formato del id antes de llamar al controlador
 function validarId(req, res, next) {
   if (!mongoose.isValidObjectId(req.params.id)) {
     return res.status(400).json({ error: 'Identificador inválido.' });

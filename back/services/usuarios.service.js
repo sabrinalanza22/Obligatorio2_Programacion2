@@ -27,7 +27,7 @@ export async function registrarUsuario(datos) {
     throw errorCon(409, 'Ese correo ya está registrado.');
   }
 
-  // guardamos el hash en el mismo campo que usan las cuentas existentes
+  // guardar el hash en el mismo campo que usan las cuentas existentes
   const passwordHash = await bcrypt.hash(limpios.password, 12);
   let usuario;
 

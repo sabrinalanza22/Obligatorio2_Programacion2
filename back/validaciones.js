@@ -155,7 +155,7 @@ export function validarEquipo(datos = {}) {
     const ev = estadisticas(p.ev, 252);
     if (ev.reduce((a, b) => a + b, 0) > 510)
       throw new Error('Los EV no pueden superar 510 en total.');
-    // armamos un objeto nuevo en vez de guardar todo lo que llegó en la petición
+    // armar un objeto nuevo en vez de guardar todo lo que llegó en la petición
     return {
       pokemonId: entero(p.pokemonId, 1, 20000),
       mote: texto(p.mote, 12),

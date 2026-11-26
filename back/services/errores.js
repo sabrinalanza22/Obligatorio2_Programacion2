@@ -5,7 +5,6 @@ export function errorCon(status, message) {
   return error;
 }
 
-// pasamos un error de validación a un error que el controlador pueda responder
 export function validar(validacion, datos) {
   try {
     return validacion(datos);

@@ -2,9 +2,7 @@
 
 URL: https://obligatorio2-programacion2-1.onrender.com
 
-Este sitio te permite crear una cuenta y armar tus propios equipos Pokemon. Lo desarrollé para el Obligatorio 2 de Programación 2.
-
-Cada usuario tiene sus equipos separados y puede crearlos, editarlos o eliminarlos.
+Este sitio te permite crear una cuenta y armar tus propios equipos Pokemon. Cada usuario tiene sus equipos separados y puede crearlos, editarlos o eliminarlos.
 
 ## ¿Qué se puede hacer?
 
@@ -27,4 +25,6 @@ Guardar desde la pantalla de personalización aplica los cambios al borrador. Pa
 
 # Anexo - Uso de inteligencia artificial
 
-Para este proyecto usé ChatGPT como apoyo para implementar funciones específicas como el carrusel de pokemon del registro / inicio de sesión. También me sirvió de ayuda para localizar errores puntuales y darme sugerencias de cómo mejorar el sitio. También me ayudó con algunos temas de interfaz para que la web sea lo más user-friendly posible. Me ayudó a definir cómo organizar los archivos js del front, y me fue de gran utilidad en la creación del css.
+Para este proyecto usé ChatGPT como apoyo durante el desarrollo. Me ayudaron a implementar funciones específicas, como el carrusel de pokemon del registro e inicio de sesión, y a resolver dudas sobre JavaScript, las consultas a PokéAPI y la personalización de los pokemon. 
+
+También lo utilicé para localizar y entender errores, definir cómo organizar los archivos js front y el back en general, y mejorar la legibilidad del código. En la interfaz, me ayudó con el CSS, la correcta adaptación a computadora y celular y algunos detalles para que el sitio fuese un poquito más user-friendly.

@@ -67,7 +67,7 @@ export function abrirEditor(original, volver, posicionInicial) {
     document.title = 'Pokemon · Editar equipo';
     app.innerHTML = '<p class="cargando">Preparando el equipo…</p>';
     try {
-      // pedimos los datos de las especies ocupadas y dejamos los huecos en su posición
+      // pedir los datos de las especies ocupadas y dejar los huecos en su posición
       const datos = [];
       for (let i = 0; i < borrador.integrantes.length; i++) {
         const integrante = borrador.integrantes[i];
@@ -117,7 +117,7 @@ export function abrirEditor(original, volver, posicionInicial) {
         </section>
       `;
       const form = app.querySelector('form');
-      // conserva lo escrito antes de redibujar o de abrir otra pantalla
+      // conservar lo escrito antes de redibujar o de abrir otra pantalla
       const guardarNombre = () => (borrador.nombre = form.elements.nombre.value);
       const salir = () => {
         if (!ocupado) volver();
@@ -129,7 +129,7 @@ export function abrirEditor(original, volver, posicionInicial) {
         evento.preventDefault();
         guardarNombre();
 
-        // mientras esperamos la respuesta evitamos salir o guardar una segunda vez
+        // mientras se espera la respuesta evita salir o guardar una segunda vez
         ocupado = true;
         form.querySelectorAll('button').forEach(b => (b.disabled = true));
 
@@ -137,7 +137,7 @@ export function abrirEditor(original, volver, posicionInicial) {
         const metodo = borrador._id ? 'PUT' : 'POST';
 
         try {
-          // mandamos solo los datos del equipo porque el dueño sale de la sesión
+          // mandar solo los datos del equipo porque el dueño sale de la sesión
           await solicitar(ruta, metodo, {
             nombre: borrador.nombre,
             integrantes: borrador.integrantes,
@@ -146,7 +146,7 @@ export function abrirEditor(original, volver, posicionInicial) {
           await volver();
           avisar('Equipo guardado.');
         } catch (error) {
-          // si falla el guardado dejamos el borrador abierto para que no se pierda
+          // si falla el guardado deja el borrador abierto para que no se pierda
           form.querySelector('.error').textContent = error.message;
           ocupado = false;
           form.querySelectorAll('button').forEach(b => (b.disabled = false));

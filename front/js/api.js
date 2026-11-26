@@ -1,4 +1,4 @@
-// en desarrollo apunta al back local y al publicar se cambia por la url del web service
+// en desarrollo apuntaba al back local y al publicar se cambia por la url del web service
 const BASE_URL = 'https://obligatorio2-programacion2-n0f5.onrender.com';
 
 // comparte las consultas de pokemon en un objeto para no repetirlas durante esta visita
@@ -19,8 +19,8 @@ export function leerToken() {
   return sessionStorage.getItem(claveToken);
 }
 
-// la pantalla principal nos pasa una función para volver al acceso cuando vence el token
-// usamos un callback normal en lugar de crear un evento personalizado
+// la pantalla principal pasa una función para volver al acceso cuando vence el token
+// usar un callback normal en lugar de crear un evento personalizado
 export function configurarSesionVencida(callback) {
   alVencerSesion = callback;
 }
@@ -40,7 +40,7 @@ export async function solicitar(ruta, metodo = 'GET', datos) {
   if (respuesta.status === 204) return null;
   const resultado = await respuesta.json();
 
-  // esperamos a que termine la petición antes de cambiar de pantalla para no perder el mensaje de error
+  // esperar a que termine la petición antes de cambiar de pantalla para no perder el mensaje de error
   if (respuesta.status === 401 && token && leerToken() === token) {
     borrarToken();
     setTimeout(() => {
@@ -154,7 +154,7 @@ export function sexoFijo(especie) {
   return null;
 }
 
-// una forma distinta puede tener otras habilidades y estadísticas por eso traemos todos sus datos
+// una forma distinta puede tener otras habilidades y estadísticas por eso traer todos sus datos
 export async function formaPorSexo(pokemon, sexo, especie) {
   const base = nombreSinSexo(pokemon.name);
   if (!tieneFormasPorSexo(pokemon.name) || !sexo || base === pokemon.name)
@@ -168,7 +168,7 @@ export async function formaPorSexo(pokemon, sexo, especie) {
   return pokemon;
 }
 
-// conserva las ilustraciones elegidas y el encuadre de los tres shiny para que no cambien de tamaño
+// conserva las ilustraciones y el encuadre de los tres shiny para que no cambien de tamaño
 export function imagenPorSexo(pokemon, integrante = {}) {
   const femenina = integrante.sexo !== 'macho';
   const ilustracionesHembra = {

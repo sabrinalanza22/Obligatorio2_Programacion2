@@ -2,7 +2,7 @@ import { imagenPorSexo } from './api.js';
 import { tipos } from './datos.js';
 import { escapar, titulo } from './interfaz.js';
 
-// arma la tarjeta con el color del primer tipo y la imagen normal o brillante
+// arma la tarjeta con el color del primer tipo y la imagen normal o shiny
 // si falla la imagen oficial intenta mostrar la versión básica
 export function tarjeta(pokemon, integrante, grande = false) {
   const tipo = tipos[pokemon.types[0].type.name] || tipos.normal;

@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import { crearApp } from './app.js';
 
-// carga las variables privadas antes de leerlas como se hace en clase
+// carga las variables privadas antes de leerlas
 dotenv.config();
 
 // lee la conexión y el secreto desde la configuración privada

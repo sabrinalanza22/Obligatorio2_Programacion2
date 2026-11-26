@@ -356,7 +356,7 @@ ${escapar(copia.notas)}</textarea>
     form.onsubmit = evento => {
       evento.preventDefault();
       if (cambiando) return;
-      // leemos cada campo por su nombre y convertimos a número los valores numéricos
+      // leer cada campo por su nombre y convertir a número los valores numéricos
       const sexoElegido = form.querySelector('input[name="sexo"]:checked');
       copia.mote = form.elements.mote.value.trim();
       copia.notas = form.elements.notas.value.trim();

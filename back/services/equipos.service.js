@@ -19,7 +19,7 @@ export function crearEquipo(datos, usuario) {
   return guardarEquipo(limpios);
 }
 
-// sigue el ejemplo de clase y comprueba quién es el dueño del documento
+// comprueba quién es el dueño del documento
 function chequearQueSeaTuyo(equipo, usuario) {
   if (equipo.usuario.toString() !== usuario) {
     throw errorCon(403, 'Ese equipo no te pertenece.');

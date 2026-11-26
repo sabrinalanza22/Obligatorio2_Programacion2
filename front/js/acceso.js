@@ -1,7 +1,7 @@
 import { solicitar, imagen } from './api.js';
 import { app, icono, escapar } from './interfaz.js';
 
-// sorteamos veinte especies una vez por carga y usamos un conjunto para no repetir ninguna
+// sortea veinte especies una vez por carga y usa un conjunto para no repetir ninguna
 const elegidos = [];
 
 while (elegidos.length < 20) {
@@ -17,7 +17,7 @@ for (let i = 0; i < 4; i++) {
 }
 
 function dibujarCarrusel() {
-  // repetimos cada fila para que la animación vuelva al comienzo sin un salto visible
+  // repetir cada fila para que la animación vuelva al comienzo sin un salto visible
   return filas
     .map((fila, i) => {
       const imagenes = fila
@@ -42,7 +42,7 @@ function conectarVisibilidad(form) {
   const campo = form.elements.password;
   const boton = form.querySelector('[data-ver]');
 
-  // cambiamos el tipo del campo y el icono sin borrar ni volver a escribir la contraseña
+  // cambiar el tipo del campo y el icono sin borrar ni volver a escribir la contraseña
   boton.onclick = () => {
     const visible = campo.type === 'password';
 
@@ -61,7 +61,7 @@ function conectarEnvio(form, ruta, alIngresar) {
   const mensaje = form.querySelector('.error');
 
   form.onsubmit = async evento => {
-    // evitamos recargar la página y bloqueamos el botón para no mandar el formulario dos veces
+    // evitar recargar la página y bloquear el botón para no mandar el formulario dos veces
     evento.preventDefault();
     boton.disabled = true;
     mensaje.textContent = '';
@@ -77,7 +77,7 @@ function conectarEnvio(form, ruta, alIngresar) {
       // el servidor deja la sesión abierta y devuelve el perfil para pasar a mis equipos
       await alIngresar(usuario);
     } catch (error) {
-      // si no se pudo entrar mostramos el motivo y dejamos corregir los datos
+      // si no se pudo entrar mostrar el motivo y dejamos corregir los datos
       mensaje.textContent = error.message;
       boton.disabled = false;
     }
@@ -164,7 +164,7 @@ export function mostrarAcceso(alIngresar, registro = false, errorInicial = '') {
     </section>
   `;
 
-  // volvemos a dibujar el mismo formulario al cambiar de pestaña
+  // volver a dibujar el mismo formulario al cambiar de pestaña
   app.querySelector('[data-ingreso]').onclick = () => mostrarAcceso(alIngresar);
   app.querySelector('[data-registro]').onclick = () =>
     mostrarAcceso(alIngresar, true);
